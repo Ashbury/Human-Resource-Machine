@@ -1,0 +1,39 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 28 COMMANDS, 506 STEPS --
+
+a:
+    COPYFROM 24
+    COPYTO   23
+    COPYTO   22
+    BUMPUP   22
+    BUMPUP   22
+    INBOX   
+    COPYTO   0
+b:
+c:
+    COPYFROM [23]
+    SUB      22
+    JUMPN    d
+    JUMPZ    f
+    COPYTO   21
+    BUMPUP   23
+    COPYFROM 21
+    COPYTO   [23]
+    JUMP     c
+d:
+    BUMPUP   22
+e:
+    COPYFROM 24
+    COPYTO   23
+    JUMP     b
+f:
+    COPYFROM 22
+    OUTBOX  
+    COPYFROM 0
+    SUB      22
+    JUMPZ    a
+    BUMPUP   23
+    COPYTO   0
+    JUMP     e
+
+
